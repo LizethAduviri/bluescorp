@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bluescorp - Tienda de Tenis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-shoe-prints"></i>
+                    <span>BLUESCORP</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#catalogo">Catálogo</a></li>
+                        <li><a href="#informacion">Información</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Los Mejores Tenis en Bluescorp</h1>
+                <p>Descubre nuestra colección exclusiva de calzado deportivo y urbano</p>
+                <a href="#catalogo" class="cta-button">Ver Catálogo</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="catalogo">
+        <div class="container">
+            <h2 class="section-title">Nuestros Productos</h2>
+            
+            <div class="categories">
+                <button class="category-btn active" data-category="all">Todos</button>
+                <button class="category-btn" data-category="hombre">Hombre</button>
+                <button class="category-btn" data-category="mujer">Mujer</button>
+                <button class="category-btn" data-category="unisex">Unisex</button>
+            </div>
+
+            <div class="sizes">
+                <button class="size-btn" data-size="all">Todas</button>
+                <button class="size-btn" data-size="36">36</button>
+                <button class="size-btn" data-size="37">37</button>
+                <button class="size-btn" data-size="38">38</button>
+                <button class="size-btn" data-size="39">39</button>
+                <button class="size-btn" data-size="40">40</button>
+                <button class="size-btn" data-size="41">41</button>
+                <button class="size-btn" data-size="42">42</button>
+                <button class="size-btn" data-size="43">43</button>
+                <button class="size-btn" data-size="44">44</button>
+                <button class="size-btn" data-size="45">45</button>
+            </div>
+
+            <div class="products" id="products-container">
+                <!-- Los productos se cargarán dinámicamente aquí -->
+            </div>
+        </div>
+    </section>
+
+    <section class="info-section" id="informacion">
+        <div class="container">
+            <h2 class="section-title">Información de la Tienda</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3><i class="fas fa-map-marker-alt"></i> Ubicación</h3>
+                    <p>Nos encontramos en Av. Principal #123, Centro Comercial Blue Plaza, Local 45, Ciudad Azul.</p>
+                    <p>Estamos cerca de la estación de metro Central y con amplio estacionamiento disponible.</p>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-clock"></i> Horarios de Atención</h3>
+                    <p>Lunes a Viernes: 9:00 AM - 8:00 PM</p>
+                    <p>Sábados: 10:00 AM - 6:00 PM</p>
+                    <p>Domingos: 11:00 AM - 4:00 PM</p>
+                    <p>Festivos: Horario especial (consultar)</p>
+                </div>
+              <div class="info-card">
+    <h3><i class="fas fa-shipping-fast"></i> Envíos y Devoluciones</h3>
+    <p>Envíos gratuitos en compras superiores a Bs 350.</p> <!-- Cambiado de $50 a Bs 350 -->
+    <p>Plazo de devolución: 30 días desde la compra.</p>
+    <p>Aceptamos todas las tarjetas de crédito y débito.</p>
+</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-shoe-prints"></i>
+                        <span>BLUESCORP</span>
+                    </div>
+                    <p>Tu destino para los mejores tenis del mercado</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p><i class="fas fa-phone"></i> +591 63592813</p>
+                    <p><i class="fas fa-envelope"></i> info@bluescorp.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Bluescorp. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+ <!-- Modal para mostrar detalles del producto -->
+<div class="modal" id="product-modal">
+    <div class="modal-content">
+        <span class="close-modal" id="close-modal">&times;</span>
+        <div class="modal-body">
+            <img src="" alt="Producto" class="modal-img" id="modal-img">
+            <div class="modal-info">
+                <h2 class="modal-title" id="modal-title"></h2>
+                <p class="modal-category" id="modal-category"></p>
+                <p class="modal-description" id="modal-description"></p>
+                <p class="modal-price" id="modal-price"></p>
+                
+                <div class="selection-options">
+                    <div class="size-selection">
+                        <h4>Selecciona tu talla:</h4>
+                        <div class="size-options" id="modal-size-options">
+                            <!-- Las opciones de talla se generarán aquí -->
+                        </div>
+                    </div>
+                    <!-- Eliminada la sección de cantidad -->
+                </div>
+                
+                <button class="buy-btn" id="modal-buy-btn">
+                    <i class="fab fa-whatsapp"></i> Enviar mensaje por WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
