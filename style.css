@@ -895,6 +895,14 @@ footer {
     border-radius: 8px;
     margin-top: 10px;
     font-size: 0.9rem;
+     text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: background 0.3s;
+}
+.info-note:hover {
+    background: rgba(30, 58, 138, 0.2);
+    text-decoration: underline;
 }
 
 
@@ -1636,4 +1644,67 @@ footer {
     .info-card {
         padding: 25px 20px;
     }
+}
+/* Estilos para el enlace de ubicación */
+.location-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    margin-top: 10px;
+}
+
+.location-link .info-note {
+    background: rgba(30, 58, 138, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    border-left: 4px solid var(--primary-color);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.location-link .info-note:hover {
+    background: rgba(30, 58, 138, 0.2);
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.15);
+}
+
+.location-link .info-note i {
+    color: var(--primary-color);
+    margin-right: 8px;
+}
+
+.location-link .info-note small {
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Mapa embebido opcional (puedes agregarlo después) */
+.map-container {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+}
+.social-section .section-title {
+    color: #216ad8 !important;
+}
+
+.social-section .section-subtitle {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    color: #216ad8;
+    font-size: 1.1rem;
+    line-height: 1.6;
+
 }
