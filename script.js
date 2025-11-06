@@ -580,24 +580,14 @@ function initiatePurchase(product) {
 💰 *Precio:* Bs ${product.price.toFixed(2)}
 🏷️ *Categoría:* ${product.category.charAt(0).toUpperCase() + product.category.slice(1)}
 
-*📝 INFORMACIÓN ADICIONAL:*
-${product.description}
-
-*🤔 CONSULTA:*
-- ¿Tienen disponible este modelo en la talla ${selectedSize}?
-- ¿Cuál sería el costo de envío a mi dirección?
-- ¿Qué métodos de pago aceptan?
-- ¿Cuál es el tiempo de entrega aproximado?
 
 *👤 MIS DATOS (completar):*
 📞 *Mi WhatsApp:* __________
-🏠 *Dirección de envío:* __________
 📋 *Ciudad:* __________
 
 Quedo atento a su respuesta para coordinar la compra. 
 ¡Muchas gracias! 😊
 
----
 `;
     
     const encodedMessage = encodeURIComponent(message);
