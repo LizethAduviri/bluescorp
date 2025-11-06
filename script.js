@@ -582,7 +582,7 @@ function initiatePurchase(product) {
 
 
 *👤 MIS DATOS (completar):*
-📞 *Mi WhatsApp:* __________
+📞 *Nombre completo:* __________
 📋 *Ciudad:* __________
 
 Quedo atento a su respuesta para coordinar la compra. 
